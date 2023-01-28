@@ -1,16 +1,16 @@
-import React, {createElement as e} from 'react';
+import { Product } from './components/Product';
 
-function App() {
+const App = () => {
 
-  return e("div", {className: "container"}, [
-    e('button', {
-      className: 'py-2 px-4 border',
-      key: 2,
-      onClick: () => console.log("click")
-    }, "Click me!")
-  ])
+  return (
+    <div className='container mx-auto max-w-2xl pt-5'>
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+    </div>
+  )
 
 }
-
 
 export default App;
