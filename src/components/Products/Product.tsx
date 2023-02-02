@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { IProduct } from "../models"
+import { IProduct } from "../../models"
 
 interface ProductProps {
     product: IProduct
@@ -11,8 +11,11 @@ export function Product({ product }: ProductProps) {
     const [details, setDetails] = useState(false)
 
     const btnClassName = details ? "bg-gray-400" : "bg-whitesmoke-400"
-
+ 
     const btnClasses = ["py-1 px-3 border", btnClassName]
+
+    console.log(product.price);
+    
 
     return (
         <div
