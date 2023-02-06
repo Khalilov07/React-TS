@@ -7,6 +7,11 @@ export const useProducts = () => {
     const [products, setProducts] = useState<IProduct[]>([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
+
+    const addProduct = (product: IProduct) => {
+        setProducts(prev => [...prev, product])
+    }
+
     const URL = "https://fakestoreapi.com/products/?limit=5"
 
     async function fetchProducts() {
@@ -30,6 +35,6 @@ export const useProducts = () => {
     console.log(products);
     
 
-    return {products, loading, error}
+    return {products, loading, error, addProduct}
 
 }
