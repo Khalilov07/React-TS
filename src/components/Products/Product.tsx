@@ -15,7 +15,7 @@ export function Product({ product }: ProductProps) {
     const btnClasses = ["py-1 px-3 border", btnClassName]
 
     console.log(product.price);
-    
+     
 
     return (
         <div
