@@ -3,14 +3,17 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => {
     return (
-        <nav className='h-[50px] flex justify-between px-5 items-center bg-gray-500 text-white'>
-            <span className='font-bold'>React 2023</span>
+        <>
+        <nav className='h-[50px] flex justify-between px-5 items-center bg-black text-white'>
+            <Link className='font-bold' to='/'>React 2023</Link>
 
-            <span>
+            <div>
                 <Link to='/' className='mr-2'>Product</Link>
                 <Link to='/about'>About</Link>
-            </span>
+            </div>
         </nav>
+        
+        </>
     );
 };
 
